@@ -24,12 +24,12 @@ public class CalculerRemunerationServiceSimpleTest {
 	@Autowired
 	private CalculerRemunerationService remunerationService;
 	@Autowired
-	private BulletinSalaire BulletinSalaire;
+	private BulletinSalaire Bulletin;
 
 	@Test
 	public void test_calculer() {
 		// TODO remplacer null par un objet bulletin
-		ResultatCalculRemuneration resultat = remunerationService.calculer(BulletinSalaire);
+		ResultatCalculRemuneration resultat = remunerationService.calculer(Bulletin);
 		assertThat(resultat.getSalaireBrut(), equalTo("2683.30"));
 		assertThat(resultat.getTotalRetenueSalarial(), equalTo("517.08"));
 		assertThat(resultat.getTotalCotisationsPatronales(), equalTo("1096.13"));
