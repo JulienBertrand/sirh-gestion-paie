@@ -1,5 +1,6 @@
 package dev.paie.entite;
 
+
 public class RemunerationEmploye {
 	
 	private Integer id;
