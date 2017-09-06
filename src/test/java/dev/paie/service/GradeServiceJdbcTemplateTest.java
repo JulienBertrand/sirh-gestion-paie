@@ -5,8 +5,6 @@ import static org.junit.Assert.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-import javax.sql.DataSource;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +29,7 @@ public class GradeServiceJdbcTemplateTest {
 
 	}
 
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void test_sauvegarder_lister_mettre_a_jour() {
 		// TODO sauvegarder un nouveau grade
