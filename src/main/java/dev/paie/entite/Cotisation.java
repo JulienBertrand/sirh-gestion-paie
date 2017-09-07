@@ -13,48 +13,58 @@ public class Cotisation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column
+	@Column(name = "CODE")
 	private String code;
-	@Column
+	@Column(name = "LIBELLE")
 	private String libelle;
-	@Column
+	@Column(name = "TAUX_SALARIAL")
 	private BigDecimal tauxSalarial;
-	@Column
+	@Column(name = "TAUX_PATRONAL")
 	private BigDecimal tauxPatronal;
-	
-	
+
 	public String getCode() {
 		return code;
 	}
+
 	public void setCode(String code) {
 		this.code = code;
 	}
-	
+
 	public String getLibelle() {
 		return libelle;
 	}
+
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
+
 	public BigDecimal getTauxSalarial() {
 		return tauxSalarial;
 	}
+
 	public void setTauxSalarial(BigDecimal tauxSalarial) {
 		this.tauxSalarial = tauxSalarial;
 	}
+
 	public BigDecimal getTauxPatronal() {
 		return tauxPatronal;
 	}
+
 	public void setTauxPatronal(BigDecimal tauxPatronal) {
 		this.tauxPatronal = tauxPatronal;
 	}
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -67,7 +77,10 @@ public class Cotisation {
 		result = prime * result + ((tauxSalarial == null) ? 0 : tauxSalarial.hashCode());
 		return result;
 	}
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -92,16 +105,19 @@ public class Cotisation {
 		if (tauxPatronal == null) {
 			if (other.tauxPatronal != null)
 				return false;
-		} else if (tauxPatronal.doubleValue()!= other.tauxPatronal.doubleValue())
+		} else if (tauxPatronal.doubleValue() != other.tauxPatronal.doubleValue())
 			return false;
 		if (tauxSalarial == null) {
 			if (other.tauxSalarial != null)
 				return false;
-		} else if (tauxSalarial.doubleValue() !=other.tauxSalarial.doubleValue())
+		} else if (tauxSalarial.doubleValue() != other.tauxSalarial.doubleValue())
 			return false;
 		return true;
 	}
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -109,9 +125,5 @@ public class Cotisation {
 		return "Cotisation [id=" + id + ", code=" + code + ", libelle=" + libelle + ", tauxSalarial=" + tauxSalarial
 				+ ", tauxPatronal=" + tauxPatronal + "]";
 	}
-	
-	
-	
-	
 
 }
