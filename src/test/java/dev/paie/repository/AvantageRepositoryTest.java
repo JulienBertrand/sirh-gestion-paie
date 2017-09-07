@@ -26,23 +26,26 @@ public class AvantageRepositoryTest {
 		avantage1.setCode("code001");
 		avantage1.setNom("freed");
 		avantage1.setMontant(123);
-		avantage1.
-
+		avantageRepository.save(avantage1);
+		
 		Avantage avantage2 = new Avantage();
 		avantage1.setCode("code002");
 		avantage1.setNom("grteet");
 		avantage1.setMontant(56);
-
+		avantageRepository.save(avantage2);
+		
 		Avantage avantage3 = new Avantage();
 		avantage1.setCode("code003");
 		avantage1.setNom("htrdezz");
 		avantage1.setMontant(778);
-
+		avantageRepository.save(avantage3);
+		
 		Avantage avantage4 = new Avantage();
 		avantage1.setCode("code004");
 		avantage1.setNom("kieet");
 		avantage1.setMontant(79);
-
+		avantageRepository.save(avantage4);
+		
 		// TODO vérifier qu'il est possible de récupérer le nouvel avantage via la
 		// méthode findOne
 		// TODO modifier un avantage

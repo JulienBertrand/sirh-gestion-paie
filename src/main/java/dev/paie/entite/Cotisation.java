@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Entity
 public class Cotisation {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	@Column
 	private String code;

@@ -8,12 +8,10 @@ public interface CotisationService {
 	void sauvegarder(Cotisation nouvelleCotisation);
 
 	void mettreAJour(Cotisation cotisation);
-	
+
 	void truncate();
 
 	List<Cotisation> lister();
-
-	
 
 	Cotisation findByCode(String code);
 }

@@ -14,7 +14,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-
 @Import(DataSourceMySQLConfig.class)
 @Configuration
 @EnableTransactionManagement
@@ -27,12 +26,13 @@ public class JpaConfig {
 	}
 
 	@Bean
-	
+
 	// Cette configuration nécessite une source de données configurée.
-	// Elle s'utilise donc en association avec un autre fichier de configuration définissant un bean DataSource.
+	// Elle s'utilise donc en association avec un autre fichier de configuration
+	// définissant un bean DataSource.
 	public EntityManagerFactory entityManagerFactory(DataSource dataSource) {
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-		vendorAdapter.setGenerateDdl(true);
+		// vendorAdapter.setGenerateDdl(true);
 		// activer les logs SQL
 		vendorAdapter.setShowSql(true);
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
@@ -40,18 +40,14 @@ public class JpaConfig {
 		// alternative au persistence.xml
 		factory.setPackagesToScan("dev.paie.entite");
 		factory.setDataSource(dataSource);
-		
-		//Drop et Create de la base
-		Properties jpaProperties= new Properties ();
+
+		// Drop et Create de la base
+		Properties jpaProperties = new Properties();
 		jpaProperties.setProperty("javax.persistence.schema-generation.database.action", "drop-and-create");
 		factory.setJpaProperties(jpaProperties);
-		
+
 		factory.afterPropertiesSet();
 		return factory.getObject();
 	}
-	
-	
-	
-	
 
 }
