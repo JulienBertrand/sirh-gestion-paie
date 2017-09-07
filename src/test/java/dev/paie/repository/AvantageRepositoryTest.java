@@ -26,6 +26,7 @@ public class AvantageRepositoryTest {
 		avantage1.setCode("code001");
 		avantage1.setNom("freed");
 		avantage1.setMontant(123);
+		avantage1.
 
 		Avantage avantage2 = new Avantage();
 		avantage1.setCode("code002");
