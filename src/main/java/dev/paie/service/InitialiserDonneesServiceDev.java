@@ -50,8 +50,8 @@ public class InitialiserDonneesServiceDev implements InitialiserDonneesService {
 
 //	@Autowired
 //	private List<Avantage> avantages;
-	@Autowired
-	private List<BulletinSalaire> bulletinSalaires;
+//	@Autowired
+//	private List<BulletinSalaire> bulletinSalaires;
 	@Autowired
 	private List<Cotisation> cotisations;
 	@Autowired
@@ -62,15 +62,15 @@ public class InitialiserDonneesServiceDev implements InitialiserDonneesService {
 //	private List<Periode> periodes;
 	@Autowired
 	private List<ProfilRemuneration> profilRemunerations;
-	@Autowired
-	private List<RemunerationEmploye> remunerationEmployes;
+//	@Autowired
+//	private List<RemunerationEmploye> remunerationEmployes;
 
 	@Override
 	public void initialiser() {
 		// TODO Auto-generated method stub
-//		for (Avantage avantage : avantages) {
-//			avantageRepository.save(avantage);
-//		}
+//		 for (Avantage avantage : avantages) {
+//		 avantageRepository.save(avantage);
+//		 }
 		for (Cotisation cotisation : cotisations) {
 			cotisationRepository.save(cotisation);
 		}
@@ -86,12 +86,12 @@ public class InitialiserDonneesServiceDev implements InitialiserDonneesService {
 		for (ProfilRemuneration profilRemuneration : profilRemunerations) {
 			profilRemunerationRepository.save(profilRemuneration);
 		}
-		for (RemunerationEmploye remunerationEmploye : remunerationEmployes) {
-			remunerationEmployeRepository.save(remunerationEmploye);
-		}
-		for (BulletinSalaire bulletinSalaire : bulletinSalaires) {
-			bulletinSalalireRepository.save(bulletinSalaire);
-		}
+//		for (RemunerationEmploye remunerationEmploye : remunerationEmployes) {
+//			remunerationEmployeRepository.save(remunerationEmploye);
+//		}
+//		for (BulletinSalaire bulletinSalaire : bulletinSalaires) {
+//			bulletinSalalireRepository.save(bulletinSalaire);
+//		}
 	}
 
 }

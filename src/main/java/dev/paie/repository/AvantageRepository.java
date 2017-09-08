@@ -7,14 +7,8 @@ import dev.paie.entite.Avantage;
 
 //@Component
 
-public interface AvantageRepository extends JpaRepository<Avantage, Integer>{
+public interface AvantageRepository extends JpaRepository<Avantage, Integer> {
 
-	
-	List<Avantage>findByCodeAndNom(String code, String nom);
-		
-		
-	
-	
-	
-	
+	List<Avantage> findByCodeAndNom(String code, String nom);
+
 }

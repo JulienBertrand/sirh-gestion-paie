@@ -32,7 +32,7 @@ public class GradeServiceJdbcTemplate implements GradeService {
 	public void mettreAJour(Grade grade) {
 		// TODO Auto-generated method stub
 		String sql = "UPDATE grade SET nbHeureBase=?, tauxBase=? WHERE code=?";
-		jdbcTemplate.update(sql,  grade.getNbHeuresBase(), grade.getTauxBase(), grade.getCode());
+		jdbcTemplate.update(sql, grade.getNbHeuresBase(), grade.getTauxBase(), grade.getCode());
 	}
 
 	@Override
