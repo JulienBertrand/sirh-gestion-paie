@@ -9,16 +9,27 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css"
 	href="https://bootswatch.com/slate/bootstrap.min.css">
-<title>Liste des Employés</title>
+<center><title>Liste des Employés</title></center>
 </head>
 <body>
-<h1>Tableau des employés</h1>
-<a href="<%=request.getContextPath()%>">retour au menu principal</a></br>
+
+<a href="<%=request.getContextPath()%>">retour au menu principal</a>
 </br>
-<a href="<%=request.getContextPath()%>/mvc/employes/creer_employe">Créer un nouvel employé</a>
+</br>
+<a href="<%=request.getContextPath()%>/mvc/employes/creer_employe">Ajouter un nouvel employé</a>
+</br>
+<a href="<%=request.getContextPath()%>/mvc/bulletins/creer_bulletin">Ajouter un nouveau bulletin</a>
+</br>
+<a href="<%=request.getContextPath()%>/mvc/bulletins/affichage_bulletin">Afficher les bulletins de salaire</a>
+</br>
+</br>
+</br>
+</br>
+</br>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-10">
+				<h1>Tableau des employés</h1>
 				<table class="table">
 					<tr>
 						<th>Matricule</th>

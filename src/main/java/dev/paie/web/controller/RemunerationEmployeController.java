@@ -48,34 +48,31 @@ public class RemunerationEmployeController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, path = "/creer_employe")
-	public ModelAndView doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public ModelAndView doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		Entreprise entreprise = entrepriseRepository.findOne(new Integer(request.getParameter("entrepriseId")));
 		ProfilRemuneration profilRemuneration = profilRemunerationRepository
 				.findOne(new Integer(request.getParameter("profilId")));
 		Grade grade = gradeRepository.findOne(new Integer(request.getParameter("gradeId")));
-		String matricule = request.getParameter("Matricule");
+		String matricule = request.getParameter("matricule");
 
 		RemunerationEmploye remunerationEmploye = new RemunerationEmploye(matricule, entreprise, profilRemuneration,
 				grade);
 		// System.out.println(remunerationEmploye);
 		remunerationEmployeRepository.save(remunerationEmploye);
-		
-		return new ModelAndView("redirect:"+"/mvc/employes/affichage_employe");
-		
+
+		return new ModelAndView("redirect:" + "/mvc/employes/affichage_employe");
+
 	}
 
 	@RequestMapping(method = RequestMethod.GET, path = "/affichage_employe")
 	public ModelAndView listEmploye() {
 		ModelAndView mv = new ModelAndView();
-	
-	mv.setViewName("employes/affichage_employe");
-	mv.addObject("employes", remunerationEmployeRepository.findAll());
-	return mv;
+
+		mv.setViewName("employes/affichage_employe");
+		mv.addObject("employes", remunerationEmployeRepository.findAll());
+		return mv;
 	}
-	
-	
-	
-	
-	
+
 }

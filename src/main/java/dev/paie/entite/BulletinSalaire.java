@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 @Entity
 public class BulletinSalaire {
@@ -23,6 +24,8 @@ public class BulletinSalaire {
 	private Periode periode;
 	@Column(name = "PRIME_EXCEP")
 	private BigDecimal primeExceptionnelle;
+	@Transient
+	private ResultatCalculRemuneration resultatCalculRemuneration;
 
 	public RemunerationEmploye getRemunerationEmploye() {
 		return remunerationEmploye;
@@ -54,6 +57,20 @@ public class BulletinSalaire {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	/**
+	 * @return the resultatCalculRemuneration
+	 */
+	public ResultatCalculRemuneration getResultatCalculRemuneration() {
+		return resultatCalculRemuneration;
+	}
+
+	/**
+	 * @param resultatCalculRemuneration the resultatCalculRemuneration to set
+	 */
+	public void setResultatCalculRemuneration(ResultatCalculRemuneration resultatCalculRemuneration) {
+		this.resultatCalculRemuneration = resultatCalculRemuneration;
 	}
 
 }

@@ -16,7 +16,7 @@ import dev.paie.entite.Periode;
 import dev.paie.entite.ProfilRemuneration;
 import dev.paie.entite.RemunerationEmploye;
 import dev.paie.repository.AvantageRepository;
-import dev.paie.repository.BulletinSalalireRepository;
+import dev.paie.repository.BulletinSalaireRepository;
 import dev.paie.repository.CotisationRepository;
 import dev.paie.repository.EntrepriseRepository;
 import dev.paie.repository.GradeRepository;
@@ -31,10 +31,10 @@ import dev.paie.repository.RemunerationEmployeRepository;
 @ComponentScan({ "dev" })
 public class InitialiserDonneesServiceDev implements InitialiserDonneesService {
 
+	// @Autowired
+	// private AvantageRepository avantageRepository;
 //	@Autowired
-//	private AvantageRepository avantageRepository;
-	@Autowired
-	private BulletinSalalireRepository bulletinSalalireRepository;
+//	private BulletinSalaireRepository bulletinSalalireRepository;
 	@Autowired
 	private CotisationRepository cotisationRepository;
 	@Autowired
@@ -48,8 +48,8 @@ public class InitialiserDonneesServiceDev implements InitialiserDonneesService {
 	@Autowired
 	private RemunerationEmployeRepository remunerationEmployeRepository;
 
-//	@Autowired
-//	private List<Avantage> avantages;
+	// @Autowired
+	// private List<Avantage> avantages;
 //	@Autowired
 //	private List<BulletinSalaire> bulletinSalaires;
 	@Autowired
@@ -58,19 +58,19 @@ public class InitialiserDonneesServiceDev implements InitialiserDonneesService {
 	private List<Entreprise> entreprises;
 	@Autowired
 	private List<Grade> grades;
-//	@Autowired
-//	private List<Periode> periodes;
+	// @Autowired
+	// private List<Periode> periodes;
 	@Autowired
 	private List<ProfilRemuneration> profilRemunerations;
-//	@Autowired
-//	private List<RemunerationEmploye> remunerationEmployes;
+	// @Autowired
+	// private List<RemunerationEmploye> remunerationEmployes;
 
 	@Override
 	public void initialiser() {
 		// TODO Auto-generated method stub
-//		 for (Avantage avantage : avantages) {
-//		 avantageRepository.save(avantage);
-//		 }
+		// for (Avantage avantage : avantages) {
+		// avantageRepository.save(avantage);
+		// }
 		for (Cotisation cotisation : cotisations) {
 			cotisationRepository.save(cotisation);
 		}
@@ -80,17 +80,17 @@ public class InitialiserDonneesServiceDev implements InitialiserDonneesService {
 		for (Grade grade : grades) {
 			gradeRepository.save(grade);
 		}
-		for (int i=1;i<=12; i++) {
+		for (int i = 1; i <= 12; i++) {
 			periodeRepository.save(new Periode(i));
 		}
 		for (ProfilRemuneration profilRemuneration : profilRemunerations) {
 			profilRemunerationRepository.save(profilRemuneration);
 		}
-//		for (RemunerationEmploye remunerationEmploye : remunerationEmployes) {
-//			remunerationEmployeRepository.save(remunerationEmploye);
-//		}
+		// for (RemunerationEmploye remunerationEmploye : remunerationEmployes) {
+		// remunerationEmployeRepository.save(remunerationEmploye);
+		// }
 //		for (BulletinSalaire bulletinSalaire : bulletinSalaires) {
-//			bulletinSalalireRepository.save(bulletinSalaire);
+//		bulletinSalalireRepository.save(bulletinSalaire);
 //		}
 	}
 

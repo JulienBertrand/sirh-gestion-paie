@@ -98,4 +98,14 @@ public class ResultatCalculRemuneration {
 	public void setNetAPayer(String netAPayer) {
 		this.netAPayer = netAPayer;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "ResultatCalculRemuneration [salaireDeBase=" + salaireDeBase + ", salaireBrut=" + salaireBrut
+				+ ", totalRetenueSalarial=" + totalRetenueSalarial + ", totalCotisationsPatronales="
+				+ totalCotisationsPatronales + ", netImposable=" + netImposable + ", netAPayer=" + netAPayer + "]";
+	}
 }
