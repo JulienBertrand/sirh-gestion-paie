@@ -27,51 +27,55 @@ les bulletins de salaire</a>
 </br>
 </br>
 </br>
-<center>
-	<h1>Ajouter un Employé</h1>
-</center>
-<center>
-	<form method="POST" action="creer_employe">
-		<table >
-			<tr>
-				<td><span>Matricule&nbsp;:&nbsp;</span></td>
-				<td><input type="text" name="matricule" required></td>
-			</tr>
-			<tr>
-				<td>Entreprises&nbsp;:&nbsp;</td>
-				<td><select name="entrepriseId" required>
-					<option selected disabled></option>
-					<c:forEach items="${entreprises}" var="entreprise">
-					<option value="${entreprise.id}">${entreprise.denomination}</option>
-				</c:forEach>
-			</select></td>
-		</tr>
-		<tr>
-			<td>Profils&nbsp;:&nbsp;</td>
-			<td><select name="profilId" required>
-				<option disabled selected></option>
-				<c:forEach items="${profils}" var="profil">
-				<option value="${profil.id}">${profil.code}</option>
-			</c:forEach>
-		</select></td>
-	</tr>
-	<tr>
-		<td>Grades&nbsp;:&nbsp;</td>
-		<td><select name="gradeId" required>
-			<option disabled selected></option>
-			<c:forEach items="${grades}" var="grade">
-			<option value="${grade.id}">${grade.code} - ${(grade.nbHeuresBase*grade.tauxBase)*12} €/an</option>
-		</c:forEach>
-	</select></td>
-</tr>
 
-<tr>
-	<td colspan="2" align="center"></br><input class="btn-success"
-		type="submit" name="Valider"></td>
-	</tr>
-</table>
+	<form method="POST" action="creer_employe">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-4">
+				<h1>Ajouter un Employé</h1>
+					<table class="table">
+						<tr class="active">
+							<td><span>Matricule&nbsp;:&nbsp;</span></td>
+							<td><input type="text" name="matricule" required></td>
+						</tr>
+						<tr class="active">
+							<td>Entreprises&nbsp;:&nbsp;</td>
+							<td><select name="entrepriseId" required>
+								<option selected disabled></option>
+								<c:forEach items="${entreprises}" var="entreprise">
+								<option value="${entreprise.id}">${entreprise.denomination}</option>
+							</c:forEach>
+						</select></td>
+					</tr>
+					<tr class="active">
+						<td>Profils&nbsp;:&nbsp;</td>
+						<td><select name="profilId" required>
+							<option disabled selected></option>
+							<c:forEach items="${profils}" var="profil">
+							<option value="${profil.id}">${profil.code}</option>
+						</c:forEach>
+					</select></td>
+				</tr>
+				<tr class="active">
+					<td>Grades&nbsp;:&nbsp;</td>
+					<td><select name="gradeId" required>
+						<option disabled selected></option>
+						<c:forEach items="${grades}" var="grade">
+						<option value="${grade.id}">${grade.code} - ${(grade.nbHeuresBase*grade.tauxBase)*12} €/an</option>
+					</c:forEach>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td colspan="2" align="center"></br><input class="btn-success"
+					type="submit" name="Valider"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
 </form>
-</center>
+
 
 
 

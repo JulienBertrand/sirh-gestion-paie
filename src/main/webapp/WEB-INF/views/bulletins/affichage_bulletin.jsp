@@ -24,7 +24,7 @@
 	<a href="<%=request.getContextPath()%>/mvc/employes/affichage_employe">Afficher
 		la liste des employés</a>
 	</br>
-	<a href="<%=request.getContextPath()%>/mvc/bulletins/creer_bulletin">Créer
+	<a href="<%=request.getContextPath()%>/mvc/bulletins/creer_bulletin">Ajouter
 		un bulletin de salaire</a>
 </br>
 </br>
@@ -33,11 +33,11 @@
 </br>
 
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-10">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
 				<h1>Tableau des bulletins</h1>
 				<table class="table">
-					<tr>
+					<tr class="success">
 						<th>Periode</th>
 						<th>Matricule</th>
 						<th>Salaire Brut</th>
@@ -45,7 +45,7 @@
 						<th>Net à Payer</th>
 					</tr>
 					<c:forEach items="${bulletins}" var="bulletin">
-						<tr>
+						<tr class="active">
 							<td>${bulletin.periode.dateDebut}-
 								${bulletin.periode.dateFin}</td>
 							<td>${bulletin.remunerationEmploye.matricule}</td>

@@ -28,27 +28,29 @@ language="java"%>
 </br>
 <div class="container">
 	<div class="row">
-		<div class="col-sm-10">
+		<div class="col-sm-8 col-sm-offset-2">
 			<h1>Tableau des employés</h1>
 			<table class="table">
-				<tr>
-					<th>Matricule</th>
-					<th>Entreprise</th>
-					<th>Grade</th>
-					<th>Profil de Remuneration</th>
-				</tr>
+				<thead>
+					<tr class="info">
+						<th>Matricule</th>
+						<th>Entreprise</th>
+						<th>Grade</th>
+						<th>Profil de Remuneration</th>
+					</tr>
+				</thead>
 				<c:forEach items="${employes}" var="employe">
-				<tr>
+				<tr class="active">
 					<td>${employe.matricule}</td>
 					<td>${employe.entreprise.denomination}</td>
 					<td>${employe.grade.code}</td>
 					<td>${employe.profilRemuneration.code}</td>
 
 				</tr>
-				</c:forEach>
-			</table>
-		</div>
+			</c:forEach>
+		</table>
 	</div>
+</div>
 </div>
 
 </body>
